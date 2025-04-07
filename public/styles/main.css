@@ -1,0 +1,289 @@
+#header {
+    background-color: black;
+    padding-top: 3px;
+}
+
+body {
+    margin: 2px 4px 2px 4px;
+}
+
+.logo {
+    margin-left: 4px;
+    margin-bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: yellow;
+    font-size: 2.5rem;
+    text-align: left;
+    line-height: 1.2;
+    padding: 15px 0px 0px 20px; /* Abstand oben, rechts, unten, links */
+  }
+  
+  .logo-line1 {
+    display: block; /* Zeigt das erste Wort in einer eigenen Zeile */
+  }
+  
+  .logo-line2 {
+    display: block; /* Zeigt das zweite Wort in einer eigenen Zeile */
+    margin-left: 4%; /* Verschiebt das zweite Wort nach rechts (zwei Drittel der Breite des ersten Wortes) */
+  }
+
+  .navbar {
+    padding-top: 0;
+  }
+
+.navbar.bg-black {
+    background-color: black !important;
+    opacity: 1 !important;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar.bg-black .nav-link {
+    color: white !important; 
+    transition: color 0.3s ease; /* Sanfter Übergang bei Hover */
+}
+
+.navbar.bg-black .nav-link:hover,
+.navbar.bg-black .nav-link:focus {
+    color: yellow !important; 
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* Hintergrund und Textfarbe des Dropdown-Menüs */
+.navbar .dropdown-menu {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  /* Textfarbe der Dropdown-Items */
+  .navbar .dropdown-menu .dropdown-item {
+    color: white;
+    transition: background-color 0.3s ease; /* Sanfter Übergang bei Hover */
+  }
+  
+  /* Hover- und Fokus-Effekte für Dropdown-Items */
+  .navbar .dropdown-menu .dropdown-item:hover,
+  .navbar .dropdown-menu .dropdown-item:focus {
+    background-color: white; /* Weißer Hintergrund bei Hover */
+    color: black; /* Schwarzer Text bei Hover */
+  }
+
+  .navbar-nav li {
+    margin-left: 20px; /* Abstand zwischen den Listenelementen */
+  }
+
+  .container {
+    margin-top: 50px;
+  }
+
+  .custom-container {
+    display: flex; 
+    flex-direction: column; /* Ordnet die Elemente vertikal an */
+    align-items: center; /* Zentriert die Elemente horizontal */
+    gap: 20px; /* Fügt Abstand zwischen den Items hinzu */
+    width: 100%; /* Nimmt die gesamte Breite ein */
+    max-width: 1200px; /* Optional: Begrenze die maximale Breite */
+    margin: 0 auto; /* Zentriert den Container auf der Seite */
+    padding: 20px;
+  }
+  @media (max-width: 860px) {
+    .custom-container {
+        padding: 0;
+    }
+  }
+
+  .item {
+    width: 100%; /* Nimmt die gesamte Breite des Containers ein */
+    max-width: 1000px; 
+    max-height: 460px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; /* Verhindert, dass Inhalte überlaufen */
+    margin: 10px;
+    padding: 10px; 
+    display: flex;
+    flex-direction: row; 
+    /*justify-content: space-between;  Platz zwischen den Elementen */
+    transition: all 0.3s ease; /* Sanfter Übergang bei Größenänderung */
+    /*align-items: stretch;  Elemente strecken sich gleichmäßig */
+    flex-wrap: wrap; /* Spalten umbrechen lassen */
+    gap: 15px; /* Abstand zwischen den Spalten */
+  }
+
+img {
+    max-width: 100%; /* Bild passt sich der Breite des Containers an */
+    max-height: 100% !important; /* Bild passt sich der Höhe des Containers an */
+    object-fit: contain; /* Verhindert Verzerrungen und passt das Bild an */
+  }
+
+  .custom-col {
+    flex: 1; /* Standardmäßig gleiche Breite für alle Spalten */
+    padding: 10px; /* Abstand innerhalb der Spalten */
+  }
+  
+  .custom-col-5 {
+    flex: 0 0 41.666%; /* 5 von 12 Spalten */
+    max-width: 41.666%;
+  }
+  
+  .custom-col-7 {
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Verteilt die Inhalte mit Platz dazwischen */
+  overflow: hidden;
+  }
+
+  .text-alignment { 
+    text-align: center;
+}
+  
+  @media (max-width: 768px) {
+    .custom-col-5,
+    .custom-col-7 {
+      flex: 0 0 100%; /* Volle Breite auf kleinen Bildschirmen */
+      max-width: 100%;
+    }
+  }
+
+  .item img {
+    max-height: 420px !important;
+  }
+
+@media (min-width: 992px) {
+    .item img {
+        max-height: 420px !important;
+      }
+}
+@media (max-width: 991px) {
+    .item {
+      max-width: 90%;
+    }
+    .item {
+        max-height: fit-content;
+    }
+  }
+
+  .text-truncated {
+    overflow: hidden; /* Verhindert, dass der Text überläuft */
+    text-overflow: ellipsis; /* Zeigt "..." am Ende des Textes */
+    display: -webkit-box; /* Unterstützt mehrzeiliges Abschneiden */
+    -webkit-line-clamp: 8; /* Zeigt maximal 3 Zeilen an */
+    -webkit-box-orient: vertical; /* Legt die Orientierung für das Abschneiden fest */
+    max-height: 13em; /* Begrenzung der Höhe (abhängig von der Zeilenhöhe) */
+    line-height: 1.5em;
+  }
+  
+  .text-expanded {
+    overflow: visible; /* Zeigt den vollständigen Text */
+    text-overflow: unset; /* Entfernt das Abschneiden */
+    display: block; /* Zeigt den Text normal an */
+    max-height: none; /* Keine Höhenbegrenzung */
+  }
+
+  .button-group {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Buttons */
+    justify-content: end; /* Buttons am Ende der Zeile ausrichten */
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+.button-container {
+    display: flex;
+    gap: 10px; 
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.read-more-btn, .btn-edit, .btn-danger, .btn-save, .btn-cancel {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  .read-more-btn {
+    background-color: #007bff;
+    font-size: 1rem;  
+  }
+  
+  .read-more-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;   
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+
+  .btn-edit {
+    background-color: #04b3aa;
+  }
+  .btn-edit:hover {
+    background-color: #05967e;
+    color: white;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Buttons linksbündig ausrichten */
+  }
+
+  .btn-save {
+    background-color: #0d6efd;
+
+  }
+  .btn-cancel {
+    background-color: #6c757d;
+  }
+
+
+  @media (min-width: 525px) {
+    .btn-edit, .btn-danger, .read-more-btn, .btn-save, .btn-cancel {
+        width: 130px;
+    }
+      }
+
+  #new-item-form {
+    visibility: hidden; /* Standardmäßig versteckt */
+    opacity: 0; /* Unsichtbar */
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: visibility 0s, opacity 0.3s ease; /* Sanfter Übergang */
+  }
+  
+  #new-item-form.visible {
+    visibility: visible; /* Sichtbar */
+    opacity: 1; /* Vollständig sichtbar */
+    position: relative;
+  }
+
+
+@media (max-width: 1199px) {
+    .container-xl {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .logo {
+        font-size: 3.2rem;
+    }
+}
+
